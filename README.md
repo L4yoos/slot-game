@@ -3,7 +3,7 @@
 
 <p align="left">
   <a href="https://github.com/l4yoos/slot-game/commits/main">
-    <img src="https://img.shields.io/github/last-commit/user/slot-game" alt="Last Commit">
+    <img src="https://img.shields.io/github/last-commit/l4yoos/slot-game" alt="Last Commit">
   </a>
   <a href="https://github.com/l4yoos/slot-game">
     <img src="https://img.shields.io/github/languages/top/l4yoos/slot-game" alt="Top Language">
