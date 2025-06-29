@@ -1,0 +1,45 @@
+package com.example.slot.domain;
+
+import lombok.RequiredArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@RequiredArgsConstructor
+class SlotMachine {
+
+    private final RandomSymbolPort symbolGenerator;
+
+    public SpinResult spin(int betAmount) {
+        if (betAmount <= 0) {
+            throw new IllegalArgumentException("Bet must be greater than zero");
+        }
+        List<Symbol> symbols = symbolGenerator.generate();
+
+        boolean win = symbols.stream().distinct().count() == 1;
+        int payout = 0;
+
+        if (win) {
+            Symbol symbol = symbols.get(0);
+            payout = symbol.getPayout() * betAmount;
+        }
+
+        return new SpinResult(symbols, win, payout);
+    }
+
+    public List<SpinResult> autoSpin(int bet, int spinCount) {
+        if (bet <= 0) {
+            throw new IllegalArgumentException("Bet must be greater than zero");
+        }
+        if (spinCount <= 0) {
+            throw new IllegalArgumentException("Spin count must be greater than zero");
+        }
+        //TODO make better valid in spin and Autospin for 3 layers (domain, app and adapters)
+        List<SpinResult> results = new ArrayList<>();
+        for (int i = 0; i < spinCount; i++) {
+            SpinResult spinResult = spin(bet);
+            results.add(spinResult);
+        }
+        return results;
+    }
+}
