@@ -1,5 +1,7 @@
 package com.example.slot.adapters.config;
 
+import com.example.auth.domain.port.out.TokenServicePort;
+import com.example.auth.domain.port.out.UserRepository;
 import com.example.slot.application.SlotService;
 import com.example.slot.domain.SlotMachineFacade;
 import com.example.slot.domain.SlotMachinePort;
@@ -12,8 +14,8 @@ import java.util.Random;
 public class SlotConfiguration {
 
     @Bean
-    public SlotMachinePort slotMachinePort() {
-        return new SlotMachineFacade(new Random());
+    public SlotMachinePort slotMachinePort(TokenServicePort tokenServicePort, UserRepository userRepository) {
+        return new SlotMachineFacade(new Random(), tokenServicePort, userRepository);
     }
 
     @Bean

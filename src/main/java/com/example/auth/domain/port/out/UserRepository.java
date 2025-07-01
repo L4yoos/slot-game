@@ -1,4 +1,8 @@
-package com.example.auth.domain.user;
+package com.example.auth.domain.port.out;
+
+import com.example.auth.domain.model.Email;
+import com.example.auth.domain.model.User;
+import com.example.auth.domain.model.UserId;
 
 import java.util.Optional;
 

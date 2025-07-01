@@ -1,4 +1,4 @@
-package com.example.auth.domain.user;
+package com.example.auth.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.NonNull;
@@ -29,5 +29,10 @@ public class UserId {
     @JsonValue
     public UUID getValue() {
         return value;
+    }
+
+    @Override
+    public String toString() {
+        return value.toString();
     }
 }

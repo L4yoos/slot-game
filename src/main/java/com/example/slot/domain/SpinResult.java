@@ -7,7 +7,7 @@ import java.util.List;
 
 @Getter
 @AllArgsConstructor
-class SpinResult {
+public class SpinResult {
     private final List<Symbol> symbols;
     private final boolean win;
     private final int payout;

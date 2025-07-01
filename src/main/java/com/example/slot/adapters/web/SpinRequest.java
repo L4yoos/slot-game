@@ -9,6 +9,6 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-class SpinRequest {
+public class SpinRequest {
     private int bet;
 }

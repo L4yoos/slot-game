@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 @RequiredArgsConstructor
-class RandomSymbolGenerator implements RandomSymbolPort {
+public class RandomSymbolGenerator implements RandomSymbolPort {
 
     private final Random random;
 

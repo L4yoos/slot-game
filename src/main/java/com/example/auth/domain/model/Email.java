@@ -1,6 +1,6 @@
-package com.example.auth.domain.user;
+package com.example.auth.domain.model;
 
-import com.example.auth.domain.user.exception.InvalidEmailException;
+import com.example.auth.application.exception.InvalidEmailException;
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.NonNull;
 import lombok.Value;

@@ -1,6 +1,9 @@
 package com.example.auth.adapters.out;
 
-import com.example.auth.domain.user.*;
+import com.example.auth.domain.model.Email;
+import com.example.auth.domain.model.User;
+import com.example.auth.domain.model.UserId;
+import com.example.auth.domain.port.out.UserRepository;
 import org.springframework.stereotype.Repository;
 import java.util.Optional;
 

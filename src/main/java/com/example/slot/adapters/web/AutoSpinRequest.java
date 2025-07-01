@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-class AutoSpinRequest {
+public class AutoSpinRequest {
     private int bet;
     private int spin;
 }

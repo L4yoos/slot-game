@@ -1,6 +1,6 @@
 package com.example.slot.domain;
 
-enum Symbol {
+public enum Symbol {
     CHERRY(100),
     LEMON(80),
     ORANGE(60),

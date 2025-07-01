@@ -11,20 +11,20 @@ public class SlotService {
 
     private final SlotMachinePort slotMachine;
 
-    public SpinResultDTO play(int bet) {
+    public SpinResultDTO play(int bet, String accessToken) {
         if (bet <= 0) {
             throw new IllegalArgumentException("Bet must be greater than zero");
         }
-        return slotMachine.spin(bet);
+        return slotMachine.spin(bet, accessToken);
     }
 
-    public List<SpinResultDTO> autoSpin(int bet, int spinCount) {
+    public List<SpinResultDTO> autoSpin(int bet, int spinCount, String accessToken) {
         if (bet <= 0) {
             throw new IllegalArgumentException("Bet must be greater than zero");
         }
         if (spinCount <= 0) {
             throw new IllegalArgumentException("Spin count must be greater than zero");
         }
-        return slotMachine.autospin(bet, spinCount);
+        return slotMachine.autospin(bet, spinCount, accessToken);
     }
 }

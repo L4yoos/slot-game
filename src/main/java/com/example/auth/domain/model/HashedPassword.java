@@ -1,4 +1,4 @@
-package com.example.auth.domain.user;
+package com.example.auth.domain.model;
 
 import lombok.NonNull;
 import lombok.Value;
@@ -12,5 +12,10 @@ public class HashedPassword {
             throw new IllegalArgumentException("Hashed password cannot be null or empty");
         }
         this.value = hashedValue;
+    }
+
+    @Override
+    public String toString() {
+        return value;
     }
 }

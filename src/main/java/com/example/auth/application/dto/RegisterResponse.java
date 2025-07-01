@@ -1,6 +1,8 @@
-package com.example.auth.application.user;
+package com.example.auth.application.dto;
 
-import com.example.auth.domain.user.*;
+import com.example.auth.domain.model.Email;
+import com.example.auth.domain.model.UserId;
+import com.example.auth.domain.model.UserStatus;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
