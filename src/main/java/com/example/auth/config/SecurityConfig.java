@@ -27,7 +27,7 @@ public class SecurityConfig {
         http
                 .cors(cors -> cors.configurationSource(request -> { // Explicit CORS configuration
                     var corsConfiguration = new org.springframework.web.cors.CorsConfiguration();
-                    corsConfiguration.addAllowedOrigin("*");
+                    corsConfiguration.addAllowedOrigin("http://localhost:4200");
                     corsConfiguration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
                     corsConfiguration.addAllowedHeader("*");
                     corsConfiguration.setExposedHeaders(List.of("Set-Cookie"));

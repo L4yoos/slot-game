@@ -1,9 +1,10 @@
-package com.example.slot.adapters.web;
+package com.example.slot.adapters.in.rest;
 
-import com.example.auth.adapters.out.CookieService;
 import com.example.auth.domain.port.out.CookieServicePort;
 import com.example.slot.application.SlotService;
-import com.example.slot.domain.SpinResultDTO;
+import com.example.slot.application.dto.AutoSpinRequest;
+import com.example.slot.application.dto.SpinRequest;
+import com.example.slot.application.dto.SpinResultDTO;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

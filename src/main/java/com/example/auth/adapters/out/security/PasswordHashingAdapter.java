@@ -1,4 +1,4 @@
-package com.example.auth.adapters.out;
+package com.example.auth.adapters.out.security;
 
 import com.example.auth.domain.port.out.PasswordHashingPort;
 import org.springframework.security.crypto.password.PasswordEncoder;

@@ -1,4 +1,4 @@
-package com.example.slot.adapters.web;
+package com.example.slot.application.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,6 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class SpinRequest {
+public class AutoSpinRequest {
     private int bet;
+    private int spin;
 }

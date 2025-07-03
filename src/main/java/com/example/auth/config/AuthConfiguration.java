@@ -1,13 +1,12 @@
 package com.example.auth.config;
 
-import com.example.auth.adapters.out.*;
+import com.example.auth.adapters.out.persistence.JpaRefreshTokenRepositoryAdapter;
+import com.example.auth.adapters.out.security.JwtTokenServiceAdapter;
+import com.example.auth.adapters.out.security.PasswordHashingAdapter;
 import com.example.auth.application.service.AuthCase;
 import com.example.auth.application.service.UserCase;
-import com.example.auth.domain.port.out.UserRepository;
+import com.example.auth.domain.port.out.*;
 import com.example.auth.domain.service.AuthenticationService;
-import com.example.auth.domain.port.out.PasswordHashingPort;
-import com.example.auth.domain.port.out.RefreshTokenRepositoryPort;
-import com.example.auth.domain.port.out.TokenServicePort;
 import com.example.auth.domain.service.UserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,11 +16,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class AuthConfiguration {
 
     private final UserRepository userRepository;
-    private final JpaRefreshTokenRepository jpaRefreshTokenRepository;
+    private final JpaRefreshTokenPort jpaRefreshTokenPort;
 
-    public AuthConfiguration(UserRepository userRepository, JpaRefreshTokenRepository jpaRefreshTokenRepository) {
+    public AuthConfiguration(UserRepository userRepository, JpaRefreshTokenPort jpaRefreshTokenPort) {
         this.userRepository = userRepository;
-        this.jpaRefreshTokenRepository = jpaRefreshTokenRepository;
+        this.jpaRefreshTokenPort = jpaRefreshTokenPort;
     }
 
     @Bean
@@ -41,7 +40,7 @@ public class AuthConfiguration {
 
     @Bean
     public RefreshTokenRepositoryPort refreshTokenRepositoryPort() {
-        return new JpaRefreshTokenRepositoryAdapter(jpaRefreshTokenRepository);
+        return new JpaRefreshTokenRepositoryAdapter(jpaRefreshTokenPort);
     }
 
     @Bean

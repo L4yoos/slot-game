@@ -1,7 +1,7 @@
 //package com.example.slot.application;
 //
-//import com.example.slot.domain.SlotMachinePort;
-//import com.example.slot.domain.SpinResultDTO;
+//import com.example.slot.domain.port.out.SlotMachinePort;
+//import com.example.slot.application.dto.SpinResultDTO;
 //import org.junit.jupiter.api.BeforeEach;
 //import org.junit.jupiter.api.Test;
 //import org.junit.jupiter.api.extension.ExtendWith;

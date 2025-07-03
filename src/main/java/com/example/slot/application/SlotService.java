@@ -1,7 +1,7 @@
 package com.example.slot.application;
 
-import com.example.slot.domain.SlotMachinePort;
-import com.example.slot.domain.SpinResultDTO;
+import com.example.slot.domain.port.out.SlotMachinePort;
+import com.example.slot.application.dto.SpinResultDTO;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
@@ -12,19 +12,10 @@ public class SlotService {
     private final SlotMachinePort slotMachine;
 
     public SpinResultDTO play(int bet, String accessToken) {
-        if (bet <= 0) {
-            throw new IllegalArgumentException("Bet must be greater than zero");
-        }
         return slotMachine.spin(bet, accessToken);
     }
 
     public List<SpinResultDTO> autoSpin(int bet, int spinCount, String accessToken) {
-        if (bet <= 0) {
-            throw new IllegalArgumentException("Bet must be greater than zero");
-        }
-        if (spinCount <= 0) {
-            throw new IllegalArgumentException("Spin count must be greater than zero");
-        }
         return slotMachine.autospin(bet, spinCount, accessToken);
     }
 }

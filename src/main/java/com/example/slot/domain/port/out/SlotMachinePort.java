@@ -1,4 +1,6 @@
-package com.example.slot.domain;
+package com.example.slot.domain.port.out;
+
+import com.example.slot.application.dto.SpinResultDTO;
 
 import java.util.List;
 

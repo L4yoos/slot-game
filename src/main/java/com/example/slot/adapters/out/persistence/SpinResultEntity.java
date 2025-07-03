@@ -1,6 +1,6 @@
-package com.example.slot.domain;
+package com.example.slot.adapters.out.persistence;
 
-import com.example.auth.adapters.out.UserEntity;
+import com.example.auth.adapters.out.persistence.UserEntity;
 import jakarta.persistence.*;
 import lombok.*;
 

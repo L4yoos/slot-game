@@ -1,11 +1,12 @@
 package com.example.slot.domain;
 
 public enum Symbol {
-    CHERRY(100),
-    LEMON(80),
+    APPLE(20),
+    BLUEBERRY(40),
     ORANGE(60),
-    PLUM(40),
-    BELL(120),
+    RASPBERRY(80),
+    GRAPE(100),
+    CHERRY(120),
     BAR(150),
     SEVEN(200);
 

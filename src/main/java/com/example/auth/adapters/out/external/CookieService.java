@@ -1,4 +1,4 @@
-package com.example.auth.adapters.out;
+package com.example.auth.adapters.out.external;
 
 import com.example.auth.domain.port.out.CookieServicePort;
 import jakarta.servlet.http.Cookie;

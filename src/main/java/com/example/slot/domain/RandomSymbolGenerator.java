@@ -1,5 +1,6 @@
 package com.example.slot.domain;
 
+import com.example.slot.domain.port.out.RandomSymbolPort;
 import lombok.RequiredArgsConstructor;
 
 import java.util.ArrayList;

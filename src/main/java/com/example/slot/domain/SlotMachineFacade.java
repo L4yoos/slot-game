@@ -1,8 +1,10 @@
 package com.example.slot.domain;
 
-import com.example.auth.domain.model.AuthToken;
 import com.example.auth.domain.port.out.TokenServicePort;
 import com.example.auth.domain.port.out.UserRepository;
+import com.example.slot.application.dto.SpinResultDTO;
+import com.example.slot.domain.port.out.RandomSymbolPort;
+import com.example.slot.domain.port.out.SlotMachinePort;
 
 import java.util.List;
 import java.util.Random;
@@ -19,9 +21,7 @@ public class SlotMachineFacade implements SlotMachinePort {
 
     @Override
     public SpinResultDTO spin(int bet, String accessToken) {
-        System.out.println(5);
         SpinResult result = slotMachine.spin(bet, accessToken);
-        System.out.println(6);
         return new SpinResultDTO(
                 result.getSymbols(),
                 result.isWin(),

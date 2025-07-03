@@ -1,4 +1,4 @@
-package com.example.auth.adapters.out;
+package com.example.auth.adapters.out.persistence;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

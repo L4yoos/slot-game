@@ -1,17 +1,18 @@
-package com.example.auth.adapters.out;
+package com.example.auth.adapters.out.persistence;
 
 import com.example.auth.domain.model.Email;
 import com.example.auth.domain.model.User;
 import com.example.auth.domain.model.UserId;
 import com.example.auth.domain.port.out.UserRepository;
 import org.springframework.stereotype.Repository;
+
 import java.util.Optional;
 
 @Repository
-public class JpaUserRepository implements UserRepository {
+public class JpaUserRepositoryAdapter implements UserRepository {
     private final SpringUserRepository springRepository;
 
-    public JpaUserRepository(SpringUserRepository springRepository) {
+    public JpaUserRepositoryAdapter(SpringUserRepository springRepository) {
         this.springRepository = springRepository;
     }
 

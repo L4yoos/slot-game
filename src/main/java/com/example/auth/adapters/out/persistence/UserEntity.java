@@ -1,9 +1,7 @@
-package com.example.auth.adapters.out;
+package com.example.auth.adapters.out.persistence;
 
 import com.example.auth.domain.model.*;
-import com.example.slot.domain.SpinResult;
-import com.example.slot.domain.SpinResultDTO;
-import com.example.slot.domain.SpinResultEntity;
+import com.example.slot.adapters.out.persistence.SpinResultEntity;
 import jakarta.persistence.*;
 import lombok.*;
 

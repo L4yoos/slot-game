@@ -5,7 +5,7 @@ import com.example.auth.domain.model.User;
 import com.example.auth.domain.model.UserId;
 import com.example.auth.domain.port.out.TokenServicePort;
 import com.example.auth.domain.port.out.UserRepository;
-import com.example.auth.domain.service.UserService;
+import com.example.slot.domain.port.out.RandomSymbolPort;
 import lombok.RequiredArgsConstructor;
 
 import java.math.BigDecimal;

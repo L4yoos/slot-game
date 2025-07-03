@@ -1,7 +1,7 @@
 //package com.example.slot.adapters.web;
 //
 //import com.example.slot.application.SlotService;
-//import com.example.slot.domain.SpinResultDTO;
+//import com.example.slot.application.dto.SpinResultDTO;
 //import com.fasterxml.jackson.databind.ObjectMapper;
 //import org.junit.jupiter.api.Test;
 //import org.springframework.beans.factory.annotation.Autowired;

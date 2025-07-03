@@ -1,12 +1,6 @@
 package com.example.auth.domain.model;
 
 import com.example.auth.application.exception.UserNotActiveException;
-import com.example.slot.domain.SpinResult;
-import com.example.slot.domain.SpinResultDTO;
-import com.example.slot.domain.SpinResultEntity;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.OneToMany;
 import lombok.Data;
 import lombok.NonNull;
 import lombok.Getter;
@@ -14,7 +8,6 @@ import lombok.Getter;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Data
 @Getter

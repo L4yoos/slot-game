@@ -1,5 +1,6 @@
-package com.example.slot.domain;
+package com.example.slot.application.dto;
 
+import com.example.slot.domain.Symbol;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

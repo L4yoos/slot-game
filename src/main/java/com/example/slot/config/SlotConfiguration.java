@@ -1,10 +1,10 @@
-package com.example.slot.adapters.config;
+package com.example.slot.config;
 
 import com.example.auth.domain.port.out.TokenServicePort;
 import com.example.auth.domain.port.out.UserRepository;
 import com.example.slot.application.SlotService;
 import com.example.slot.domain.SlotMachineFacade;
-import com.example.slot.domain.SlotMachinePort;
+import com.example.slot.domain.port.out.SlotMachinePort;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
